@@ -1,0 +1,26 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Create a command line employee generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bshort985/team-profile-generator.git"
+  },
+  "author": "Brian Short",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bshort985/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/bshort985/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^28.0.3"
+  }
+}
