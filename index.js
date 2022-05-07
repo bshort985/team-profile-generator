@@ -4,7 +4,7 @@ const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const generatePage = require("./src/page-template");
-const writeFile = require("./src/generate-page");
+
 const inquire = require("inquirer");
 const fs = require("fs");
 
@@ -220,6 +220,10 @@ function initApp() {
           });
 
     }
+
+    function generateTeamPage() {
+        fs.writeFileSync("./dist/team.html", generatePage(teamArray), "utf-8");
+    };
 
     addManager();
 }
