@@ -1,11 +1,12 @@
 // When starting the application prompt the user to enter manager information
 
-const Employee = require("./lib/Employee");
+const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
+const generatePage = require("./src/page-template");
+const writeFile = require("./src/generate-page");
 const inquire = require("inquirer");
-const Intern = require("./lib/Intern");
-
+const fs = require("fs");
 
 const teamArray = [];
 
@@ -95,7 +96,7 @@ function initApp() {
                 break;
                 case "Intern": addIntern();
                 break;
-                //default: saveTeam();
+                default: generateTeamPage();
 
             }
         });
@@ -214,13 +215,13 @@ function initApp() {
             const intern = new Intern(answers.name, answers.empId, answers.email, answers.school);
             teamArray.push(intern);
             console.log(intern);
+            console.log(teamArray);
             buildTeam();
           });
 
     }
-   
+
     addManager();
-    
 }
 
-initApp();
+initApp()
