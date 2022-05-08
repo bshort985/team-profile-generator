@@ -39,7 +39,7 @@ const generateEngineer = engineer => {
             <ul class="list-group">
                 <li>ID: ${engineer.getId()}</li>
                 <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                <li>GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
+                <li>GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank">${engineer.getGitHub()}</a></li>
             </ul>
         </div>
 
@@ -62,7 +62,7 @@ const generateIntern = intern => {
             <ul class="list-group">
                 <li>ID: ${intern.getId()}</li>
                 <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-                <li>School: ${intern.getShool()}</li>
+                <li>School: ${intern.getSchool()}</li>
             </ul>
         </div>
 

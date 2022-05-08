@@ -1,0 +1,21 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    font-size: 50px;
+    background-color: blanchedalmond;
+    color: black;
+}
+
+.main-card {
+    max-width: 200px;
+    border: black solid;
+    font-size: small;
+}
+
+.list-group {
+    list-style: none;
+}

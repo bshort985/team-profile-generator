@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "jest"
+    
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "dependencies": {
     "inquirer": "^8.2.4",
     "jest": "^28.0.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
   }
 }
