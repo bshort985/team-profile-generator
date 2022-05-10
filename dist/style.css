@@ -5,17 +5,38 @@
 
 .header {
     text-align: center;
-    font-size: 50px;
-    background-color: blanchedalmond;
+    background-color: rgb(181, 194, 191);
     color: black;
 }
 
-.main-card {
-    max-width: 200px;
+body {
+    background-color: rgb(103, 141, 103);
+}
+
+.card-header{
+    margin-left: 5%;
+}
+
+.card {
     border: black solid;
+    border-radius: 10%;
+    display: flex;
+    flex-wrap: wrap;
     font-size: small;
+    flex-direction: column;
+    background-color: rgb(181, 194, 191);
+}
+
+.main-area {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 10%;
+
 }
 
 .list-group {
     list-style: none;
+    border: black;
+    height: auto;
 }

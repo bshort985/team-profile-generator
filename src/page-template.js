@@ -6,44 +6,41 @@ generateTeam = team => {
 const generateManager = manager => {
 
     return `
-    
-    <div>
 
-    <h2>${manager.getName()}<h2>
-    <h2>${manager.getRole()}<h2>
-
-    <div class="card-body">
-            <ul class="list-group">
-                <li>ID: ${manager.getId()}</li>
-                <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-                <li>Office number: ${manager.getOfficeNumber()}</li>
-            </ul>
+    <section class="card" style="width: 18rem;">
+    <div class="card-header">
+        <h2>${manager.getName()}</h2>
+        <h2>${manager.getRole()}</h2>
+    </div>
+        <div>
+                <ul class="list-group list-group-flush">
+                    <li>ID: ${manager.getId()}</li>
+                    <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+                    <li>Office number: ${manager.getOfficeNumber()}</li>
+                </ul>
         </div>
-
-    <div>
-    
+</section>
     
     `;
-};
+   };
 
 const generateEngineer = engineer => {
 
     return `
     
-    <div>
-
-    <h2>${engineer.getName()}<h2>
-    <h2>${engineer.getRole()}<h2>
-
-    <div class="card-body">
-            <ul class="list-group">
-                <li>ID: ${engineer.getId()}</li>
-                <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                <li>GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank">${engineer.getGitHub()}</a></li>
-            </ul>
+    <section class="card" style="width: 18rem;">
+    <div class="card-header">
+        <h2>${engineer.getName()}</h2>
+        <h2>${engineer.getRole()}</h2>
+    </div>
+        <div>
+                <ul class="list-group list-group-flush">
+                    <li>ID: ${engineer.getId()}</li>
+                    <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                    <li>GitHub: ${engineer.getGitHub()}</li>
+                </ul>
         </div>
-
-    <div>
+</section>
     
     
     `;
@@ -53,26 +50,25 @@ const generateIntern = intern => {
 
     return `
     
-    <div>
-
-    <h2>${intern.getName()}<h2>
-    <h2>${intern.getRole()}<h2>
-
-    <div class="card-body">
-            <ul class="list-group">
-                <li>ID: ${intern.getId()}</li>
-                <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-                <li>School: ${intern.getSchool()}</li>
-            </ul>
+    <section class="card" style="width: 18rem;">
+    <div class="card-header">
+        <h2>${intern.getName()}</h2>
+        <h2>${intern.getRole()}</h2>
+    </div>
+        <div>
+                <ul class="list-group list-group-flush">
+                    <li>ID: ${intern.getId()}</li>
+                    <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+                    <li>School: ${intern.getSchool()}</li>
+                </ul>
         </div>
-
-    <div>
+</section>
     
     
     `;
 };
 
-// build array to sort data into itrs respected section
+// build array to sort data into it's respected section
 
 const html = [];
 
@@ -111,18 +107,22 @@ module.exports = team => {
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div>
-        <h1>Your Team</h1>
-    </div>
+    <body>
+        <header class="header">
+            <div>
+                <h2>MY TEAM</h2>
+            </div>
+        </header>
 
-    <div>
-
-       ${generateTeam(team)}
-
-    <div>
-        
-</body>
+        <main class="container">
+            <div class="row">
+                <div class="main-area">
+                    ${generateTeam(team)}
+                </div>
+            </div>
+        </main>
+            
+    </body>
 </html>
 
     `;
