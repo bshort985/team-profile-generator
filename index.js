@@ -36,7 +36,7 @@ function initApp() {
                 name: "empId",
                 message: "Provide Team Manager's 5 digit employee ID number.",
                 validate: answer => {
-                    const valid = answer.match( /^[1-9]{1,5}$/ );
+                    const valid = answer.match( /^[1-9]{5,5}$/ );
                     if (valid) {
                         return true;
                     }
